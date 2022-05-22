@@ -1,0 +1,285 @@
+/* THIS STYLESHEET IS COMMON TO EVERY CSS PAGE OF THIS WEBSITE */
+
+/* FONT-FAMILY */
+@import url('https://db.onlinewebfonts.com/c/8f383153e7ec8e171aeacc314f7c3c5b?family=Ringbearer'); /* LOTR title - h1*/
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap'); /* body */
+@import url('http://fonts.cdnfonts.com/css/first-order'); /*menu*/
+@import url('http://fonts.cdnfonts.com/css/aniron'); /* h2 */
+          
+.colors { /* just for color references */
+	background-color: #E7C8A2; /* background color */
+	background-color: #D87904; 
+	background-color: #312D0A; 
+}
+
+.clear { 
+	clear:both;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	background-color: #E7C8A2;
+	font-family: 'Philosopher', sans-serif;
+	overflow-x: hidden; 
+}
+
+.top { /* picture on header */
+	height: 475px;
+	top: 0;
+	display: flex; 
+	margin: -10px;
+	background-color: #ffffff;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	margin: auto;
+	font-family: 'Ringbearer';
+	font-size: 83px;
+	color: #f2c912;
+	text-shadow: 3px 3px 4px #d87904;
+}
+
+.emphasis {
+	color: #312d0a;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+/* ------------- MENU  ----------- */
+
+.menu {
+	position: sticky;
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #ffffff;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 20px;
+	z-index:5;
+}
+
+.menu_item {
+	flex-grow: 3;
+	text-align: center;
+	font-family: 'First Order Light', sans-serif;
+	font-size: 25px;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	margin-bottom: 7px;
+}
+
+ .menu_item a {
+	text-decoration: none;
+	color: #000000;
+ }
+
+.menu_item:hover::before {
+	content:url("../images/left-arrow.png");
+	position: relative;
+	left: -5px;
+	top: 3px;
+}
+
+.menu_item:hover::after {
+	content:url("../images/right-arrow.png");
+	position: relative;
+	left: 5px;
+	top: 3px;
+}
+
+.menu_item 	:hover {
+	color: #d87904;
+}
+
+/* ------------- END MENU  ----------- */
+
+
+/* ----  CARACTER ON THE RIGHT ------ */
+
+.caracter {
+	margin-left: 300%;
+	bottom: 3px;
+	position: fixed;
+	z-index: 6;
+	animation: 3s slidein forwards 2s;
+}
+
+
+.bubble {
+	z-index: 7;
+	position: fixed;
+	top: 135px;
+	left: 985px;
+	background-image: url("../images/speech_bubble.png");
+	background-repeat:no-repeat;
+	background-size:316px 155px;
+	width: 316px;
+	height: 155px;
+	opacity:0;
+	animation: 2s show-element forwards 4s;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.speech{
+	z-index: 8;
+	width: 0;
+	height: 20px;
+	overflow: hidden;
+	animation: typing 3s steps(100, end) forwards; /* I the whole speech to have a "typed" effect but it only works on the first word of each line*/
+}
+
+.closeLbl {
+	cursor:pointer;
+	position: fixed;
+	top:21%;
+	right:15%;
+	width: 17px;
+	height:17px;
+	z-index: 9;
+	border: solid 1px #f2c912;
+	border-radius: 3px;
+	color: #f2c912;
+	background-color: rgb(34, 16, 3);
+	text-align: center;
+	opacity:0;
+	animation: 2s show-element forwards 4s;
+}
+
+/* I understand better how the selectors (+, ~ etc...) work now. I believe that this part of the code could be simpler (and in the html too */
+
+#closeBtn {
+	display: none;
+}
+
+#closeBtn:checked ~ .onlyLbl {
+	animation: 2s hide-element forwards;
+}
+
+#closeBtn:checked ~ .caracter {
+	animation: 3s slideout forwards;
+}
+
+#closeBtn:checked ~ .bubble {
+	animation: 2s hide-element forwards;
+}
+
+/* ----  END OF CARACTER ON THE RIGHT ------ */
+
+
+
+/* ---- INTRODUCTION SPACE ON TOP OF PAGE ----- */
+
+.intro-title {
+    font-size: 35px;
+    color: #312d0a;
+    margin-left: 400px;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+}
+
+.intro {
+    margin-left: 400px;
+    border-radius: 14px;
+    background-color: #ffffff;
+    display: inline-block;
+    padding: 10px;
+    width: 50%;
+    line-height: 28px;
+    vertical-align: center;
+	margin-bottom: 27px;
+	z-index: 2;
+	position:relative;
+}
+
+/* ---- END INTRODUCTION SPACE ON TOP OF PAGE ----- */
+
+.elvish { /* Elvish letters behind intro */
+	margin-left: 0;
+	top: 94%;
+	position: absolute;
+	animation: 80s horizontal-scrolling infinite;
+}
+
+
+.little { /* DIV for the circle with the caracter inside. every css page has .little div with a personal content for each page*/
+
+	width: 100px;
+	height:100px;
+	background-size: contain;
+    background-repeat: no-repeat;
+	margin: 5px;
+}
+
+.arrow img { /* DIV for the arrow button to navigate the page */
+    max-width: 60px;
+    height: auto;
+	margin:5px;
+}
+
+.gobackup { /* DIV that contains .little and .arrow to navigate the page */ 
+	display:flex;
+	position:relative;
+	margin-left: 40%;
+	width:300px;
+}
+
+.footer {
+	position: relative;
+	height:30px;
+	bottom:-10px;
+	left:-10px;
+	width:110%;
+	background-color: #ffffff;
+	text-align: center;
+	padding-top: 10px;
+}
+
+
+/* ----------- ANIMATIONS ------- */
+
+@keyframes slidein {
+	from {margin-left: 100%;
+		width: 300%; }
+	to {margin-left: 70%;
+		width: 100%; }
+}
+
+@keyframes slideout {
+	from {margin-left: 70%;
+		width: 100%; }
+	to {margin-left: 100%;
+		width: 300%; }
+}
+
+
+@keyframes horizontal-scrolling {
+	from {margin-left: 0;
+		width: 100%; }
+	to {margin-left: -100%;
+		width: 100%; }
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+
+  
+@keyframes show-element {
+	from {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes hide-element {
+	from {opacity: 1;}
+	100% {opacity: 0; z-index: 0;}
+}

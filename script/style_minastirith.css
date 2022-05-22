@@ -1,0 +1,87 @@
+/* THIS STYLESHEET IS FOR THE MINAST TIRITH PAGE */
+
+/* ---- THE MAIN CONTENT OF THIS PAGE IS IN A TABLE ---- */
+table { 
+    width:93%;
+    margin-left: 5%;
+    background-color: rgb(255,255,255,0.8);
+    filter:drop-shadow(10px 10px 1rem #D87904);
+    border-radius: 50px;
+    margin-bottom: 5%;
+    border-spacing: 12px 5px;
+}
+
+caption { /* Table title */
+    height: 63px;
+    font-family: 'Aniron', sans-serif;
+    color: #312D0A;
+    text-shadow: none;
+    font-size: 47px;
+    margin-bottom: 50px;
+}
+
+caption::before {
+    content:url("../images/title_before.png") ;
+    position:relative; 
+    left:-3px;
+    top:10px;
+}
+
+caption::after {
+    content:url("../images/title_after.png") ;
+    position:relative; 
+    left:3px;
+    top:10px;
+}
+
+th {
+    height: 30px;
+    font-family: 'Aniron', sans-serif;
+    font-size: 14;
+    padding: 20px;
+}
+
+
+
+/* --- images in the table (first column)--- */
+table img { 
+    width: 180px;
+    height: auto;
+    margin: 19px;
+    border-radius: 20px;
+    filter:drop-shadow(15px 15px 1rem #312D0A);
+    transition: width 0.2s ease-in-out;
+    align-content: center;
+}
+
+table img:hover {
+    width: 186px;
+    height: auto;
+}
+
+/* ---- Second column of the table ----*/
+.name {
+    padding:15px;
+    font-size: 20px;
+}
+
+/* ---- third column of the table ----*/
+.other-name {
+    width: 120px;
+    color:#D87904;
+    font-weight: bold;
+    padding:10px;
+}
+
+/* ----- last column of the table ---- */
+.description { 
+    background-color: #312D0A;
+    color: #D87904;
+    border-radius: 50px;
+    padding:20px;
+    border-bottom: solid 3px rgb(255,255,255,0.2);
+}
+
+.little { /* Personal image for the circle with caracter inside */
+    background-image: url("../images/aragorn_drawing.png");
+}

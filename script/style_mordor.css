@@ -1,0 +1,74 @@
+/* THIS STYLESHEET IS FOR THE MORDOR PAGE OF THE WEBSITE */
+
+
+.quiz { /* DIV for the quizz background */
+    padding:10px;
+	display: flex;
+	flex-direction: column;
+    border-radius: 30px;
+    width:75%;
+    margin-left: 13%;
+    background-image: url("../images/quiz-bg.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    align-items: center;
+}
+
+.question { /* DIV for the questions */
+	width:450px;
+	padding:10px;
+    margin: 7px;
+	border-radius: 4px;
+    background-color: rgb(255,255,255,0.9);
+}
+
+/* --- QUESTION 1 DIVS ---- */
+
+/* The 1st question is in another div in order to manage it separatly (different radio buttons etc...) */
+
+.question1 {
+	width:450px;
+	padding:10px;
+    margin: 7px;
+	border-radius: 4px;
+    color: #000000;
+    background-color: rgb(255,255,255,0.9);
+}
+
+.question1 img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    filter:drop-shadow(15px 15px 0.5rem #312D0A);
+}
+
+.question1 [type=radio] {
+    opacity:0;
+}
+
+.question1 [type=radio]:checked + img {
+    outline: 5px solid #D87904;
+    filter:drop-shadow(15px 15px 0.5rem #e9dc70);
+}
+
+.friend {
+    text-align:center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---- END QUESTION 1 DIVS ----*/
+
+.result { /* DIV for result page */
+	width:70%;
+	padding:10px;
+	margin:7px;
+	border-radius: 4px;
+    background-color: rgb(255,255,255,0.9);
+}
+
+.little { /* Personal image for the circle with caracter inside */
+    background-image: url("../images/sauron_drawing.png");
+}
